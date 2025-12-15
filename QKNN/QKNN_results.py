@@ -25,19 +25,23 @@ testing_images = [testing_image1, testing_image2, testing_image3, testing_image4
 train_labels = np.array([0,0,1,1,2,2,3,3])
 test_labels = np.array([1,0,3,1])
 
+#Calculate the number of index qubits
 n_index_qubits = int(np.ceil(np.log2(len(training_images))))
 
+# Calculate the number of pixel qubits
 h, w = np.array(image1).shape # Since all images have the same resolution
 pixels = h*w
 amplitudes = 2*pixels
 n_pixel_qubits = int(np.log2(amplitudes))
 
+# Give the images the right type of data
 training_data = [row for img in training_images for row in img]
 
 # Train the QKNN
 qknn = QKNN(training_data, train_labels,n_index_qubits=n_index_qubits,n_pixel_qubits=n_pixel_qubits)
 
-correct = 0
+correct = 0 # Amount of correct predictions
+
 # Test QKNN using the test images
 for i in range(len(test_labels)):
   # Predict the test image using the overlap
@@ -47,13 +51,15 @@ for i in range(len(test_labels)):
   print('y_exp:', test_labels[i])
   print('y_pred:', y_pred)
 
+  # If the prediction is correct, increase the amount of correct prediction with 1
   if y_pred == test_labels[i]:
     correct += 1
 
+# Calculate the percentage of correct guesses
 correct_percentage = correct/len(test_labels)*100
 
 print(f'Percentage of correct predicted images: {correct_percentage}%')
 
-# Visualize
+# Visualize diagram of test data
 fig = swap_test_qc.draw('mpl')
 fig.savefig("Figures/QKNN_Visual.png")
