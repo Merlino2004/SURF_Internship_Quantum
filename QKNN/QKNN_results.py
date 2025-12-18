@@ -1,5 +1,20 @@
+import sys
+sys.path.append("..")
+
 import numpy as np
 from QKNN import QKNN
+
+from CoherenceCalculation.coherence import CoherenceCalculator
+from qiskit_ibm_runtime.fake_provider import FakeMontrealV2
+
+fake_backend = FakeMontrealV2() # Fake backend
+
+coherence_calculator = CoherenceCalculator(
+    backend=fake_backend,
+    SDK='qiskit',
+    inputs=None,
+    q_params=None
+)
 
 # Test Data
 testing_image1 = [[0.5,0],[0.5,0]]
@@ -54,6 +69,9 @@ for i in range(len(test_labels)):
   # If the prediction is correct, increase the amount of correct prediction with 1
   if y_pred == test_labels[i]:
     correct += 1
+
+  total_time = coherence_calculator.forward(swap_test_qc)
+  print(f'Coherence time of circuit {i+1}: {total_time*1e6:.3f} \u03BCs')
 
 # Calculate the percentage of correct guesses
 correct_percentage = correct/len(test_labels)*100
