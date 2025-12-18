@@ -70,6 +70,7 @@ for i in range(len(test_labels)):
   if y_pred == test_labels[i]:
     correct += 1
 
+  # Computing coherence time of QKNN 
   total_time = coherence_calculator.forward(swap_test_qc)
   print(f'Coherence time of circuit {i+1}: {total_time*1e6:.3f} \u03BCs')
 
