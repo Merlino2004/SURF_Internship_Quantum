@@ -50,15 +50,3 @@ The training behavior is controlled by `config.yaml`. Here is a brief overview o
     * **`batch_size`**: The number of samples per batch.
     * **`lr`**: The learning rate for the Adam optimizer.
     * **`epochs`**: The total number of training epochs.
-
-## Expected Outputs
-
-After running the training script, you can expect the following outputs:
-
-* **Trained Model:** The trained model backbone will be saved in the `models/` directory (e.g., `models/model_backbone_tcga_classical_20231027_103000.pt`).
-* **t-SNE Visualization:** A t-SNE visualization of the latent space will be saved in the `models/` directory (e.g., `models/latent_tsne_tcga_classical_20231027_103000.png`).
-* **Training Logs:** Training and validation losses for each run are logged in `logs/training_log.csv`.
-* **TensorBoard Logs:** You can view live training metrics by running:
-    ```bash
-    tensorboard --logdir runs
-    ```
