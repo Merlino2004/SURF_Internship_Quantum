@@ -15,6 +15,7 @@ conda activate [environment_name]
 ```bash
 pip install -r requirements.txt
 ```
+Make sure you run the code in the newly created environment! Otherwise, errors will be displayed.
 
 ## Project Structure
 PartialDifferentialEquations/ 
