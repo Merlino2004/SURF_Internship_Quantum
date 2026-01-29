@@ -1,4 +1,4 @@
-# PartialDifferentialEquations
+# Partial Differential Equations
 ## Introduction
 This repository contains the tutorial, including code, for the classical solution and quantum solution on how to solve linear PDEs with code. The tutorial is in a Jupyter Notebook, because the code was edited in Visual Studio Code, the requirements file won't install Jupyter Notebook. Make sure you have Jupyter Notebook already installed, or run the code via VSC. 
 

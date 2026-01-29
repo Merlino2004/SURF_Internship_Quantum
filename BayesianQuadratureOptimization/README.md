@@ -1,4 +1,4 @@
-# QC-AcquisitionFunction
+# Bayesian Quadrature Optimization
 ## Introduction
 This repository contains the code for the Bayesian quadrature optimization in molecular dynamics chapter of the internship report. This is modified code from the following paper: 'Quantum Bayesian Optimization' (https://arxiv.org/abs/2310.05373).
 
