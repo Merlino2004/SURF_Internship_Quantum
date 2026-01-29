@@ -11,9 +11,13 @@ Follow the steps below to build a virtual environment using Conda and then insta
 conda create -n [environment_name]
 conda activate [environment_name]
 ```
-3. ***Installing required packages***: Run the following code to install the necessary packages.
+3. ***Installing required packages***: Run the following code to install the necessary packages, if you have a windows system:
 ```bash
-pip install -r requirements.txt
+pip install -r SURF_Internship_Quantum\PartialDifferentialEquations\requirements.txt
+```
+Otherwise run:
+```bash
+pip install -r SURF_Internship_Quantum/PartialDifferentialEquations/requirements.txt
 ```
 Make sure you run the code in the newly created environment! Otherwise, errors will be displayed.
 
