@@ -6,12 +6,12 @@ This repository contains the code for the QKNN application discussed in the inte
 Follow the steps below to build a virtual environment using Conda and then install the right packages using Pip:
 
 1. ***Install Python***: Make sure you have Python 3.11 installed, as this was the version used during the code's modification, though other versions might also work.
-3. ***Create environment***: Run the following command to create and activate an environment. Make sure you replace '[environment_name]' with the name you want to use, make sure you use a different name then your other environments.
+2. ***Create environment***: Run the following command to create and activate an environment. Make sure you replace '[environment_name]' with the name you want to use and use a different name then your other environments.
 ```bash
 conda create -n [environment_name]
 conda activate [environment_name]
 ```
-4. ***Installing required packages***: Run the following code to install the necessary packages, if you have a windows system:
+3. ***Installing required packages***: Run the following code to install the necessary packages, if you have a windows system:
 ```bash
 pip install -r SURF_Internship_Quantum\MedicalImaging\QKNN\requirements.txt
 ```
@@ -19,7 +19,7 @@ Otherwise run:
 ```bash
 pip install -r SURF_Internship_Quantum/MedicalImaging/QKNN/requirements.txt
 ```
-Make sure you run the code in the newly created environment! Otherwise, errors will be displayed.
+Make sure you run the application in the newly created environment! Otherwise, errors will be displayed.
 
 ## Project Structure
 QKNN/ 
